@@ -19,6 +19,7 @@ def convert():
 	outputFile = getOutputDir()
 
 	command = f'{base} -i {inputFile} {outputFile}'
+	print(command)
 	return system(command)
 
 def mute():

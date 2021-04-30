@@ -1,4 +1,4 @@
-import random, json
+import random, json, os
 from datetime import datetime
 from . import wolf as wolfModule
 from . import chrome as chromeModule
@@ -6,7 +6,9 @@ from . import files as filesModule
 from . import youtubedl as youtubedlModule
 from . import ffmpeg as ffmpegModule
 
-globalConfigs = json.load(open('configs.json'))
+currentDirectory = os.path.dirname(os.path.abspath(__file__))
+baseDirectory = os.path.dirname(currentDirectory)
+globalConfigs = json.load(open(baseDirectory + '/configs.json'))
 
 def getName():
   return globalConfigs['name']

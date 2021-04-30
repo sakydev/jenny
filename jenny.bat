@@ -1,1 +1,1 @@
-python index.py
+python %~dp0/index.py
