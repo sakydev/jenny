@@ -155,6 +155,30 @@ def getCommandsList():
     'action': 'playOnYoutube'
   }
 
+  commands['download_video'] = {
+    'info': 'Download a video from 30+ sources',
+    'module': youtubedlModule,
+    'keywords': {'download', 'video'},
+    'match': 'all',
+    'action': 'download'
+  }
+
+  commands['download_audio_youtube'] = {
+    'info': 'Download MP3 of YouTube video',
+    'module': chromeModule,
+    'keywords': {'download', 'audio'},
+    'match': 'all',
+    'action': 'downloadAudioOnly'
+  }
+
+  commands['download_channel_youtube'] = {
+    'info': 'Download entire YouTube channel',
+    'module': chromeModule,
+    'keywords': {'download', 'channel'},
+    'match': 'all',
+    'action': 'downloadChannel'
+  }
+
   commands['search_torrent'] = {
     'info': 'Search a torrent across multiple websites',
     'module': chromeModule,
