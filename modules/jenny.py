@@ -3,6 +3,8 @@ from datetime import datetime
 from . import wolf as wolfModule
 from . import chrome as chromeModule
 from . import files as filesModule
+from . import youtubedl as youtubedlModule
+from . import ffmpeg as ffmpegModule
 
 globalConfigs = json.load(open('configs.json'))
 
@@ -165,7 +167,7 @@ def getCommandsList():
 
   commands['download_audio_youtube'] = {
     'info': 'Download MP3 of YouTube video',
-    'module': chromeModule,
+    'module': youtubedlModule,
     'keywords': {'download', 'audio'},
     'match': 'all',
     'action': 'downloadAudioOnly'
@@ -173,11 +175,29 @@ def getCommandsList():
 
   commands['download_channel_youtube'] = {
     'info': 'Download entire YouTube channel',
-    'module': chromeModule,
+    'module': youtubedlModule,
     'keywords': {'download', 'channel'},
     'match': 'all',
     'action': 'downloadChannel'
   }
+
+  # ffmpeg starts
+  commands['convert_video'] = {
+    'info': 'Convert video to other format or audio',
+    'module': ffmpegModule,
+    'keywords': {'convert', 'video'},
+    'match': 'all',
+    'action': 'convert'
+  }
+
+  commands['rotate_video'] = {
+    'info': 'Rotate video by any degrees',
+    'module': ffmpegModule,
+    'keywords': {'rotate', 'video'},
+    'match': 'all',
+    'action': 'rotate'
+  }
+  # ffmpeg ends
 
   commands['search_torrent'] = {
     'info': 'Search a torrent across multiple websites',

@@ -11,6 +11,8 @@ def getOutputDir():
 	downloadDefault = 'C:/Users/' + getlogin() + '/Downloads/'
 	downloadDir = jenny.ask(f'Output directory or press enter to use default {downloadDefault}') or downloadDefault
 
+	return downloadDir
+
 def download():
 	base = getBasePath()
 	url = getUrl()
