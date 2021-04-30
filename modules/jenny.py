@@ -155,6 +155,14 @@ def getCommandsList():
     'action': 'playOnYoutube'
   }
 
+  commands['search_torrent'] = {
+    'info': 'Search a torrent across multiple websites',
+    'module': chromeModule,
+    'keywords': {'search', 'torrent'},
+    'match': 'all',
+    'action': 'searchTorrent'
+  }
+
   commands['sort_directory'] = {
     'info': 'Sorts a directory contents by file type into another dir',
     'module': filesModule,

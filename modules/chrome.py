@@ -45,5 +45,25 @@ def playOnYoutube():
 	openUrl('https://youtube.com/search?q=' + query.replace(' ', ''))
 	jenny.say(f'YouTube with results for "{query}" has been opened in your browser')
 
+def searchTorrent():
+	query = jenny.ask('What are you looking for')
+	sites = [
+		'https://proxyrarbg.org/torrents.php?search=[query]',
+		'https://thepiratebay10.org/search/[query]/1/99/0',
+		'https://yts.mx/browse-movies/[query]/all/all/0/latest/0/all',
+		'https://torrentz2eu.org/index.html?q=[query]',
+		'https://eztv.re/search/[query]',
+		'https://zooqle.com/search?q=[query]',
+		'https://www.limetorrents.info/search/all/[query]/',
+		'https://www.torlock.com/?qq=1&q=[query]',
+		'https://1337x.to/search/[query]/1/'
+		]
+
+	for site in sites:
+		url = site.replace('[query]', query)
+		openUrl(url)
+
+	jenny.say('You torrent query has been opened in Chrome')
+
 def motivate():
 	openUrl('https://youtube.com/search?q=motivation')
