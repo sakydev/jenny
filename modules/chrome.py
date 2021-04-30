@@ -45,6 +45,11 @@ def playOnYoutube():
 	openUrl('https://youtube.com/search?q=' + query.replace(' ', ''))
 	jenny.say(f'YouTube with results for "{query}" has been opened in your browser')
 
+def searchImages():
+	query = jenny.ask('What are you looking for')
+	url = f'https://www.google.com/search?q={query}&tbm=isch'
+	openUrl(url)
+
 def searchTorrent():
 	query = jenny.ask('What are you looking for')
 	sites = [

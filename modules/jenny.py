@@ -118,9 +118,9 @@ def process(userCommand):
 
 def help():
   for command, contents in getCommandsList().items():
-    print(f'    {command} : {contents["info"]}')
-    print('    ' + str(contents['keywords']))
-    print('\n')
+    keywords = str(contents['keywords'])
+    print(f'    {command} : {contents["info"]} {keywords}')
+    print('')
 
 # match options are one or all
 
@@ -207,6 +207,14 @@ def getCommandsList():
     'keywords': {'search', 'torrent'},
     'match': 'all',
     'action': 'searchTorrent'
+  }
+
+  commands['search_images'] = {
+    'info': 'Search images in browser',
+    'module': chromeModule,
+    'keywords': {'search', 'images'},
+    'match': 'all',
+    'action': 'searchImages'
   }
 
   commands['sort_directory'] = {
