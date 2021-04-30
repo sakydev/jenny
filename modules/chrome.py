@@ -1,8 +1,9 @@
 import sqlite3, webbrowser
+from os import getlogin
 from . import jenny
 
 def removeNsfw():
-	con = sqlite3.connect('C:\\Users\\saqic\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History')
+	con = sqlite3.connect('C:\\Users\\' + getlogin() + '\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History')
 
 	cursor = con.cursor()
 	cursor.execute("select id, url, title from urls")
