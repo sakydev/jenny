@@ -56,6 +56,10 @@ def greet():
 
   return message + ', ' + getRandomTitle()
 
+def getQueryFromUserCommand(userCmd):
+  if '[' in userCmd and ']' in userCmd:
+    return userCmd[userCmd.find('[')+1 : userCmd.find(']')]
+
 def ask(question=False, inputDefault=False, greetings=False):
   name = getName()
   title = getRandomTitle()
@@ -100,8 +104,16 @@ def process(userCommand):
       if module == 'help':
         return help()
       else:
-        function = getattr(module, action)
-        return function()
+        query = getQueryFromUserCommand(userCommand)
+        if query:
+          print('Query exists: ' + action)
+          function = getattr(module, action)(query=query)
+        else:
+          print('NO Query exists')
+          function = getattr(module, action)
+          function()
+
+        return function
 
   if isYes(config('always_search')):
     answer = 'yes'
@@ -139,7 +151,7 @@ def getCommandsList():
     'info': 'Plays random music from music dir',
     'module': filesModule,
     'keywords': {'random', 'music'},
-    'match': 'one',
+    'match': 'all',
     'action': 'playRandomMusic'
   }
 
@@ -151,12 +163,12 @@ def getCommandsList():
     'action': 'removeNsfw'
   }
 
-  commands['play_on_youtube'] = {
-    'info': 'Play a video on YouTube in Chrome',
+  commands['search_on_youtube'] = {
+    'info': 'Search a video on YouTube in Chrome',
     'module': chromeModule,
     'keywords': {'play', 'youtube'},
     'match': 'all',
-    'action': 'playOnYoutube'
+    'action': 'searchOnYoutube'
   }
 
   commands['download_video'] = {

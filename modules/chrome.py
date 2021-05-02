@@ -3,6 +3,7 @@ from os import getlogin
 from . import jenny
 
 def removeNsfw():
+	print('asd')
 	con = sqlite3.connect('C:\\Users\\' + getlogin() + '\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History')
 
 	cursor = con.cursor()
@@ -40,18 +41,19 @@ def openUrl(url):
 		webbrowser.BackgroundBrowser("C://Program Files (x86)//Google//Chrome//Application//chrome.exe"))
 	webbrowser.get('chrome').open(url)
 
-def playOnYoutube():
-	query = jenny.ask('What would you like to play')
+def searchOnYoutube(query=False):
+	query = query or jenny.ask('What would you like to play')
 	openUrl('https://youtube.com/search?q=' + query.replace(' ', ''))
 	jenny.say(f'YouTube with results for "{query}" has been opened in your browser')
 
-def searchImages():
-	query = jenny.ask('What are you looking for')
+def searchImages(query=False):
+	query = query or jenny.ask('What images are you looking for')
+	print('search images for ' + query)
 	url = f'https://www.google.com/search?q={query}&tbm=isch'
 	openUrl(url)
 
-def searchTorrent():
-	query = jenny.ask('What are you looking for')
+def searchTorrent(query=False):
+	query = query or jenny.ask('What are you looking for')
 	sites = [
 		'https://proxyrarbg.org/torrents.php?search=[query]',
 		'https://thepiratebay10.org/search/[query]/1/99/0',
@@ -70,5 +72,5 @@ def searchTorrent():
 
 	jenny.say('You torrent query has been opened in Chrome')
 
-def motivate():
+def motivate(query=False):
 	openUrl('https://youtube.com/search?q=motivation')
