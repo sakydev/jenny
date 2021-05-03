@@ -106,10 +106,8 @@ def process(userCommand):
       else:
         query = getQueryFromUserCommand(userCommand)
         if query:
-          print('Query exists: ' + action)
           function = getattr(module, action)(query=query)
         else:
-          print('NO Query exists')
           function = getattr(module, action)
           function()
 
@@ -253,6 +251,12 @@ def getCommandsList():
     'action': 'startWorkPlace'
   }
 
-
+  commands['goto'] = {
+    'info': 'Quickly jump to a folder [reads from configs.json]',
+    'module': filesModule,
+    'keywords': {'goto', 'openup'},
+    'match': 'one',
+    'action': 'goto'
+  }
 
   return commands

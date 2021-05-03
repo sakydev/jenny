@@ -71,3 +71,15 @@ def startWorkPlace():
   startfile('evernote')
   startfile('filezilla')
   startfile('D:\Clients')
+
+def goto(query=False):
+  destination = query or jenny.ask('Where do you want to go')
+  mappedDirectories = jenny.config('directories')
+  if destination in mappedDirectories:
+    fpath = mappedDirectories[destination]
+    fullPath = path.abspath(fpath)
+    if path.exists(fullPath):
+      startfile(fullPath)
+      return
+
+  jenny.output('Directory not found')
