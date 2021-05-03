@@ -1,6 +1,6 @@
 # iterates over each file in input directory
 # and moves to outputdir under folders by file type
-from os import system, listdir, path, mkdir, rename, getlogin
+from os import system, listdir, path, mkdir, rename, getlogin, startfile
 import ctypes, random, shutil
 from . import jenny
 
@@ -64,3 +64,10 @@ def setRandomWallpaper():
   # SPI_SETDESKWALLPAPER = 20
   # ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, "image", 0)
   ctypes.windll.user32.SystemParametersInfoW(20, 0, image , 0)
+
+def startWorkPlace():
+  startfile('powershell')
+  startfile('chrome')
+  startfile('evernote')
+  startfile('filezilla')
+  startfile('D:\Clients')

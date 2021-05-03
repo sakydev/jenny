@@ -245,4 +245,14 @@ def getCommandsList():
     'action': 'setRandomWallpaper'
   }
 
+  commands['start_workplace'] = {
+    'info': 'Opens up tools needed for development',
+    'module': filesModule,
+    'keywords': {'startwork', 'wakeup'},
+    'match': 'one',
+    'action': 'startWorkPlace'
+  }
+
+
+
   return commands
