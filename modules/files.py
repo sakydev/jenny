@@ -1,7 +1,7 @@
 # iterates over each file in input directory
 # and moves to outputdir under folders by file type
 from os import system, listdir, path, mkdir, rename, getlogin
-import shutil
+import ctypes, random, shutil
 from . import jenny
 
 def sortDirectory():
@@ -54,3 +54,13 @@ def playRandomMusic():
   inputDefault = 'C:/Users/' + getlogin() + '/Music/favs'
   inputDir = jenny.ask(f'Input directory or press enter to use default {inputDefault}') or inputDefault
   system("vlc.exe.lnk " + inputDir + " --qt-start-minimized")
+
+def setRandomWallpaper():
+  defaultPath = 'C:/Users/' + getlogin() + '/Pictures/Wallpapers'
+  path = jenny.ask(f'Input directory or press enter to use default {defaultPath}') or defaultPath
+  image = defaultPath + '/' + random.choice(listdir(defaultPath))
+
+  print(f'Setting Wallpaper {image}')
+  # SPI_SETDESKWALLPAPER = 20
+  # ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, "image", 0)
+  ctypes.windll.user32.SystemParametersInfoW(20, 0, image , 0)

@@ -9,9 +9,10 @@ Hence, I put together Jenny. This tool not only helps keep things organized but 
 - Filter out and delete chrome history
 - Search videos on YouTube
 - Download videos from 30+ sources
-- Convert YouTube videos in MP3
+- Convert YouTube videos to MP3
 - Download the entire YouTube channel
 - Convert, mute, rotate, merge, split videos
 - Search torrents across 10 websites
 - Search images on Google
 - Sort directory by file type
+- Set random wallpaper from a directory

@@ -237,4 +237,12 @@ def getCommandsList():
     'action': 'sortDirectory'
   }
 
+  commands['set_wallpaper'] = {
+    'info': 'Set random wallpaper from directoruy',
+    'module': filesModule,
+    'keywords': {'set', 'wallpaper'},
+    'match': 'all',
+    'action': 'setRandomWallpaper'
+  }
+
   return commands
