@@ -3,16 +3,21 @@ A personal AI assistant that helps me get mundane tasks done. I have lots of inf
 
 Hence, I put together Jenny. This tool not only helps keep things organized but also makes the execution of tasks easier.
 
-### Features
-- Answer mathematical and geographical questions
-- Play all music files in a directory
-- Filter out and delete chrome history
-- Search videos on YouTube
-- Download videos from 30+ sources
-- Convert YouTube videos to MP3
-- Download the entire YouTube channel
-- Convert, mute, rotate, merge, split videos
-- Search torrents across 10 websites
-- Search images on Google
-- Sort directory by file type
-- Set random wallpaper from a directory
+**Features** 
+Following are the things Jenny can currently do. 
+
+`random music` Plays random music from the music directory  
+`play youtube`Search a video on YouTube in Chrome  
+`download video` Download a video from 30+ sources  
+`download audio` Download MP3 of YouTube video  
+`download channel` Download the entire YouTube channel   
+`convert video` Convert video to other format or audio  
+`rotate video` Rotate video by any degrees  
+`search torrent` Search a torrent across multiple websites  
+`search images` Search images in the browser  
+`sort directory` Sorts directory contents by file type and copies to another directory  
+`set wallpaper` Set random wallpaper from the directory  
+`startwork` Opens up tools needed for development   
+`goto` Quickly jump to a folder  
+
+This is an ongoing project. I'll keep adding to it as needed and also update this page. 
