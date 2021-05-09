@@ -60,9 +60,6 @@ def setRandomWallpaper():
   path = jenny.ask(f'Input directory or press enter to use default {defaultPath}') or defaultPath
   image = defaultPath + '/' + random.choice(listdir(defaultPath))
 
-  print(f'Setting Wallpaper {image}')
-  # SPI_SETDESKWALLPAPER = 20
-  # ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, "image", 0)
   ctypes.windll.user32.SystemParametersInfoW(20, 0, image , 0)
 
 def startWorkPlace():
