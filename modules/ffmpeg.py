@@ -29,7 +29,6 @@ def mute():
 	return system(command)
 
 def add_subtitles():
-
 	subs_file = jenny.ask('Subtitles file')
 
 	if not os.path.exists(subs_file):
@@ -39,7 +38,6 @@ def add_subtitles():
 	return system(command)
 
 def add_watermark():
-
 	default_position = 'top_left'
 
 	position = jenny.ask('Positon: top_left, top_right, bottom_right, bottom_left, center') or default_position
