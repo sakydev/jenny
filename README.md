@@ -3,7 +3,7 @@ A personal AI assistant that helps me get mundane tasks done. I have lots of inf
 
 Hence, I put together Jenny. This tool not only helps keep things organized but also makes the execution of tasks easier.
 
-**Features**
+#### Features
 Jenny is divided into modules. Following are the things Jenny can currently do.
 
 **Chrome module**
