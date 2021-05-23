@@ -209,6 +209,111 @@ def get_commands_list():
     'match': 'all',
     'action': 'rotate'
   }
+
+  commands['mute_video'] = {
+    'info': 'Mute a video',
+    'module': ffmpeg_module,
+    'keywords': {'mute', 'video'},
+    'match': 'all',
+    'action': 'mute'
+  }
+
+  commands['add_video_subs'] = {
+    'info': 'Add video subtitles',
+    'module': ffmpeg_module,
+    'keywords': {'subtitle', 'video'},
+    'match': 'all',
+    'action': 'add_subtitles'
+  }
+
+  commands['watermark_video'] = {
+    'info': 'Add a watermark to video',
+    'module': ffmpeg_module,
+    'keywords': {'watermark', 'video'},
+    'match': 'all',
+    'action': 'add_watermark'
+  }
+
+  commands['extract_audio'] = {
+    'info': 'Extract audio from video',
+    'module': ffmpeg_module,
+    'keywords': {'extract', 'audio'},
+    'match': 'all',
+    'action': 'extract_audio'
+  }
+
+  commands['waveform_video'] = {
+    'info': 'Extract video waveform',
+    'module': ffmpeg_module,
+    'keywords': {'waveform', 'video'},
+    'match': 'all',
+    'action': 'extract_video_waveform'
+  }
+
+  commands['flip_video'] = {
+    'info': 'Flip a video vertically or horizontally',
+    'module': ffmpeg_module,
+    'keywords': {'flip', 'video'},
+    'match': 'all',
+    'action': 'flip'
+  }
+
+  commands['thumbnails_video'] = {
+    'info': 'Extract video thumbnail',
+    'module': ffmpeg_module,
+    'keywords': {'thumbnail', 'video'},
+    'match': 'all',
+    'action': 'thumbnails'
+  }
+
+  commands['speed_video'] = {
+    'info': 'Increase or decrease video speed',
+    'module': ffmpeg_module,
+    'keywords': {'speed', 'video'},
+    'match': 'all',
+    'action': 'speed'
+  }
+
+  commands['volume_video'] = {
+    'info': 'Increase or decrease video volume',
+    'module': ffmpeg_module,
+    'keywords': {'volume', 'video'},
+    'match': 'all',
+    'action': 'volume'
+  }
+
+  commands['greyscale_video'] = {
+    'info': 'Make video greyscale',
+    'module': ffmpeg_module,
+    'keywords': {'greyscale', 'video'},
+    'match': 'all',
+    'action': 'greyscale'
+  }
+
+  commands['reverse_video'] = {
+    'info': 'Reverse video by any degrees',
+    'module': ffmpeg_module,
+    'keywords': {'reverse', 'video'},
+    'match': 'all',
+    'action': 'reverse'
+  }
+
+  commands['stack_video'] = {
+    'info': 'Show two videos side by side',
+    'module': ffmpeg_module,
+    'keywords': {'sidebyside', 'video'},
+    'match': 'all',
+    'action': 'stack'
+  }
+
+  commands['split_video'] = {
+    'info': 'Split a video',
+    'module': ffmpeg_module,
+    'keywords': {'split', 'video'},
+    'match': 'all',
+    'action': 'split'
+  }
+
   # ffmpeg ends
 
   commands['search_torrent'] = {
