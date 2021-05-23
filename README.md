@@ -9,9 +9,7 @@ Jenny is divided into modules. Following are the things Jenny can currently do.
 **Chrome module**
 
 `play youtube`Search a video on YouTube in Chrome
-
 `search torrent` Search a torrent across multiple websites
-
 `search images` Search images in the browser
 
 **Video manipulation (FFMPEG) module**
