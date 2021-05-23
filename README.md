@@ -14,35 +14,21 @@ Jenny is divided into modules. Following are the things Jenny can currently do.
 
 **Video manipulation (FFMPEG) module**
 
-`convert video` Convert video to other format or audio
-
-`video rotate` Rotate video by any degrees
-
-`video mute` Mute a video
-
-`video subtitle` Add video subtitles
-
-`video watermark` Add a watermark to video
-
-`audio extract` Extract audio from video
-
-`video waveform` Extract video waveform
-
-`video flip` Flip a video vertically or horizontally
-
-`video thumbnail` Extract video thumbnail
-
-`video speed` Increase or decrease video speed
-
-`video volume` Increase or decrease video volume
-
-`video greyscale` Make video greyscale
-
-`video reverse` Reverse video by any degrees
-
-`video sidebyside` Show two videos side by side
-
-`video split` Split a video
+`convert video` Convert video to other format or audio  
+`video rotate` Rotate video by any degrees  
+`video mute` Mute a video  
+`video subtitle` Add video subtitles  
+`video watermark` Add a watermark to video  
+`audio extract` Extract audio from video  
+`video waveform` Extract video waveform  
+`video flip` Flip a video vertically or horizontally  
+`video thumbnail` Extract video thumbnail  
+`video speed` Increase or decrease video speed  
+`video volume` Increase or decrease video volume  
+`video greyscale` Make video greyscale  
+`video reverse` Reverse video by any degrees  
+`video sidebyside` Show two videos side by side  
+`video split` Split a video  
 
 **Files module**
 `random music` Plays random music from the music directory
