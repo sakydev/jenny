@@ -2,7 +2,7 @@ import sqlite3, webbrowser
 from os import getlogin
 from . import jenny
 
-def removeNsfw():
+def remove_nsfw():
 	print('asd')
 	con = sqlite3.connect('C:\\Users\\' + getlogin() + '\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History')
 
@@ -13,7 +13,7 @@ def removeNsfw():
 	total = len(urls)
 	done = 0
 	deleted = 0
-	pendingIds = []
+	pending_ids = []
 	keywords = jenny.config('bad_words')
 
 	for url in urls:
@@ -26,33 +26,33 @@ def removeNsfw():
 		for keyword in keywords:
 			if keyword in link or keyword in title:
 				jenny.output(f'{keyword} matched, deleting..')
-				pendingIds.append((uid,))
+				pending_ids.append((uid,))
 				deleted += 1
 
 		done += 1
 
 	query = 'DELETE FROM urls WHERE id=?'
-	cursor.executemany(query, pendingIds)
+	cursor.executemany(query, pending_ids)
 	con.commit()
 
-def openUrl(url):
+def open_url(url):
 	webbrowser.register('chrome',
 		None,
 		webbrowser.BackgroundBrowser("C://Program Files (x86)//Google//Chrome//Application//chrome.exe"))
 	webbrowser.get('chrome').open(url)
 
-def searchOnYoutube(query=False):
+def search_on_youtube(query=False):
 	query = query or jenny.ask('What would you like to play')
-	openUrl('https://youtube.com/search?q=' + query.replace(' ', ''))
+	open_url('https://youtube.com/search?q=' + query.replace(' ', ''))
 	jenny.say(f'YouTube with results for "{query}" has been opened in your browser')
 
-def searchImages(query=False):
+def search_images(query=False):
 	query = query or jenny.ask('What images are you looking for')
 	print('search images for ' + query)
 	url = f'https://www.google.com/search?q={query}&tbm=isch'
-	openUrl(url)
+	open_url(url)
 
-def searchTorrent(query=False):
+def search_torrent(query=False):
 	query = query or jenny.ask('What are you looking for')
 	sites = [
 		'https://proxyrarbg.org/torrents.php?search=[query]',
@@ -68,9 +68,9 @@ def searchTorrent(query=False):
 
 	for site in sites:
 		url = site.replace('[query]', query)
-		openUrl(url)
+		open_url(url)
 
 	jenny.say('You torrent query has been opened in Chrome')
 
 def motivate(query=False):
-	openUrl('https://youtube.com/search?q=motivation')
+	open_url('https://youtube.com/search?q=motivation')
