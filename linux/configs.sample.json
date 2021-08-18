@@ -1,0 +1,37 @@
+{
+	"name": "Jenny",
+  "always_search": "no",
+  "speech": "no",
+  "messages": {
+  	"titles": ["sir"],
+  	"positives": ["y", "yes", "yep", "yeah", "ahan", "yo", "do it", "fire", "shoot"],
+  	"negatives": ["n", "no", "nope", "nah", "nada", "none", "forget it"],
+    "initiators": [
+      "How may I be of assistance",
+	    "What can I do for you",
+	    "How may I help you",
+	    "How can I be of help",
+	    "How may I be useful for you",
+      "Tell me what I can do",
+      "Need some help?",
+      "Please, just ask, okay?",
+      "Want me to help you with something?",
+      "Feel free to ask me if you need something.",
+      "I am here to help you",
+      "How can I be of service?",
+      "Happy to help"
+    ],
+    "confused": [
+      "Im sorry, but can't help you with that",
+		  "I have no idea what to do with that",
+		  "This seems out of my range of skills",
+		  "Oh crap! I don't know how to do that. Can you please teach me"
+    ]
+  },
+  "bad_words": [
+    "word_1", "word_2"
+  ],
+  "directories": {
+    "name": "path",
+  }
+}
